@@ -1,5 +1,11 @@
-@import "./base";
-@import "./animations";
-@import "./fonts";
-@import "./mixins";
-@import "./variables";
+@import "base";
+@import "animations";
+@import "fonts";
+@import "mixins";
+@import "variables";
+
+// Блоки
+@import "blocks/main-header";
+@import "blocks/wrapper";
+@import "blocks/main-nav";
+@import "blocks/site-list";

@@ -1,0 +1,9 @@
+@mixin transition($property) {
+  transition: $property 0.25s ease-out;
+}
+
+@mixin drop-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

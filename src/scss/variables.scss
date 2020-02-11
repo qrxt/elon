@@ -1,1 +1,11 @@
-$test: green;
+// Цветовые
+
+$black: #000000;
+$white: #ffffff;
+
+$transparent-white: rgba($color: $white, $alpha: 0.15);
+$transparent-black: rgba($color: $black, $alpha: 0.25);
+
+// Шрифты
+
+$font-primary: "Museo Sans", "Arial", sans-serif;

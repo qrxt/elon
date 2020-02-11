@@ -21,6 +21,8 @@ const del = require("del");
 const cheerio = require("gulp-cheerio");
 const svgstore = require("gulp-svgstore");
 
+const imagemin = require("gulp-imagemin");
+
 const server = serverCreator.create();
 
 gulp.task("server", () => {
@@ -61,8 +63,26 @@ gulp.task("server", () => {
       "html",
       "refresh"
     )
+  );
+
+  gulp.watch(
+    "src/img/*.{png,jpg}",
+    gulp.series(
+      "images",
+      "refresh"
+    )
   )
 });
+
+gulp.task("images", () =>
+  gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("dist/img"))
+);
 
 gulp.task("js", () =>
   gulp.src("src/js/*.js")
@@ -129,5 +149,13 @@ gulp.task("refresh", done => {
 
 gulp.task("clean", () => del("dist"))
 
-gulp.task("build", gulp.series("clean", "copy", "scss", "sprite", "html", "js"));
+gulp.task("build", gulp.series(
+  "clean",
+  "copy",
+  "scss",
+  "sprite",
+  "images",
+  "html",
+  "js"
+));
 gulp.task("start", gulp.series("build", "server"));
