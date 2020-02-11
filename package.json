@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "eslint": "eslint src/js/",
+    "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss",
+    "lint": "npm run stylelint && npm run eslint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp start"
   },
-  "author": "",
+  "author": "qrxt",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
@@ -19,6 +21,7 @@
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "eslint": "^6.8.0",
+    "eslint-config-problems": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-cheerio": "^1.0.0",
@@ -31,7 +34,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svgstore": "^7.0.1",
     "gulp-terser": "^1.2.0",
-    "stylelint": "^13.1.0"
+    "stylelint": "^13.1.0",
+    "stylelint-config-htmlacademy": "^0.1.4"
   },
   "browserslist": [
     "last 2 versions",

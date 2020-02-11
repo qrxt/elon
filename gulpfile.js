@@ -1,10 +1,12 @@
+"use strict";
+
 const gulp = require("gulp");
 
 const serverCreator = require("browser-sync");
 const sourcemaps = require("gulp-sourcemaps");
 
 const babel = require("gulp-babel");
-const terser = require("gulp-terser");
+// const terser = require("gulp-terser");
 const concat = require("gulp-concat");
 
 const scss = require("gulp-sass");
@@ -98,7 +100,7 @@ gulp.task("sprite", () =>
     "source/img/logo-*.svg"
   ])
     .pipe(cheerio({
-      run: function ($) {
+      run: $ => {
         $("[fill]").removeAttr("fill");
       },
       parserOptions: { xmlMode: true }
