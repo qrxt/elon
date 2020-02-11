@@ -6,3 +6,12 @@
   font-display: swap;
   font-weight: 300;
 }
+
+@font-face {
+  font-family: "Museo Sans";
+  src: url("../fonts/museo-sans-bold.woff2") format("woff2"),
+    url("../fonts/museo-sans-bold.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}

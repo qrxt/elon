@@ -71,7 +71,15 @@ gulp.task("server", () => {
       "images",
       "refresh"
     )
-  )
+  );
+
+  gulp.watch(
+    "src/fonts/*.{woff,woff2}",
+    gulp.series(
+      "copy",
+      "refresh"
+    )
+  );
 });
 
 gulp.task("images", () =>

@@ -1,0 +1,42 @@
+.promo-adventure {
+
+}
+
+.promo-adventure__shape-text {
+  display: block;
+
+  @include fullhd-only {
+    clip-path: polygon(0px 0px, 36.86% -1px, 34.40% 82.26%, 0px 100%);
+  }
+}
+
+.promo-adventure__large-text {
+  display: table;
+  margin: 0;
+
+  font-family: $font-primary;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+
+  background: linear-gradient(60deg, $white 15%, #ff4005);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 58px;
+  line-height: 62px;
+}
+
+.promo-adventure__small-text {
+  display: table;
+  margin: 0;
+
+  font-family: $font-primary;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: $white;
+
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background: linear-gradient(60deg, $white 15%, #ff4005);
+}
