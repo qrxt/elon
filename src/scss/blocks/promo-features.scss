@@ -1,0 +1,21 @@
+.promo-features {
+  width: 28%;
+}
+
+.promo-features__list {
+  @include drop-list();
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.promo-features__item {
+  width: 160px;
+  min-height: 165px;
+
+  margin-bottom: 10px;
+}
+
+.promo-features__item:nth-child(2n+1) {
+  margin-right: 10px;
+}
