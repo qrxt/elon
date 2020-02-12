@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   <link rel="stylesheet" href="css/style.min.css">
   <title>Document</title>
 </head>
@@ -62,14 +63,34 @@
     <section class="main-header__promo promo">
       <div class="promo__inner wrapper">
         <div class="promo__adventure promo-adventure">
-          <span class="promo-adventure__shape-text">
-            <p class="promo-adventure__large-text">
-              Путешествие
+          <div class="promo-adventure__text-wrapper">
+            <span class="promo-adventure__shape-text">
+              <p class="promo-adventure__gradient-text promo-adventure__gradient-text--uppercase">
+                Путешествие
+              </p>
+            </span>
+            <p class="promo-adventure__gradient-text promo-adventure__gradient-text--lowercase">
+              На красную планету
             </p>
-          </span>
-          <p class="promo-adventure__small-text">
-            На красную планету
-          </p>
+          </div>
+
+          <a class="promo-adventure__start-btn start-btn" href="#">
+            <span class="start-btn__text">
+              Начать путешествие
+            </span>
+          </a>
+
+          <svg class="promo-adventure__zigzag" height="200" width="500">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="transparent" />
+                <stop offset="100%" stop-color="#ffffff" />
+              </linearGradient>
+            </defs>
+            <polyline points="1,1 75,55 403,55"
+            fill="none" stroke="url(#gradient)" stroke-width="1" />
+            <circle cx="405" cy="55" r="2" stroke="white" stroke-width="1" fill="none" />
+         </svg>
         </div>
       </div>
     </section>
