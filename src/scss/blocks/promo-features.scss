@@ -1,9 +1,11 @@
 .promo-features {
-  width: 28%;
+  width: 32%;
 }
 
 .promo-features__list {
   @include drop-list();
+
+  padding-left: 15px;
 
   display: flex;
   flex-wrap: wrap;
@@ -17,5 +19,6 @@
 }
 
 .promo-features__item:nth-child(2n+1) {
+  width: 190px;
   margin-right: 10px;
 }

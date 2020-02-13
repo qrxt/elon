@@ -1,8 +1,10 @@
 .feature {
   position: relative;
+  padding-top: 17px;
+
   background-color: rgba($color: $white, $alpha: 0.03);
 
-
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -21,6 +23,20 @@
   &::after {
     width: 1px;
     height: 100%;
+  }
+
+  &--top-right {
+    padding-top: 16px;
+    padding-left: 28px;
+  }
+
+  &--bottom-left,
+  &--bottom-right {
+    padding-top: 30px;
+  }
+
+  &--bottom-right {
+    padding-left: 30px;
   }
 
   &--top-left {
@@ -215,15 +231,26 @@
   text-align: center;
 }
 
+.feature__top {
+  padding-bottom: 19px;
+
+  font-size: 17px;
+  line-height: 22px;
+  text-transform: lowercase;
+}
+
 .feature__middle {
   font-size: 60px;
-  line-height: 62px;
+  line-height: 52px;
   font-weight: 700;
 }
 
-.feature__top,
 .feature__bottom {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 22px;
   text-transform: lowercase;
+}
+
+.feature__little-text {
+  font-size: 20px;
 }
