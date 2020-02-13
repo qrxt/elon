@@ -1,6 +1,10 @@
 .promo__inner {
   display: flex;
   justify-content: space-between;
+
+  // @include tablet-landscape {
+  //   justify-content: flex-start;
+  // }
 }
 
 .promo__adventure {

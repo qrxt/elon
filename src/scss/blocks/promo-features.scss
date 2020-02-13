@@ -1,5 +1,9 @@
 .promo-features {
   width: 32%;
+
+  @include tablet-landscape {
+    width: 40%;
+  }
 }
 
 .promo-features__list {
@@ -9,6 +13,10 @@
 
   display: flex;
   flex-wrap: wrap;
+
+  @include tablet-landscape {
+    justify-content: flex-end;
+  }
 }
 
 .promo-features__item {

@@ -1,4 +1,13 @@
 .main-header {
   background-image: url("../img/main-bg.png");
   background-repeat: no-repeat;
+
+  @include desktop {
+    background-position: top center;
+  }
+
+  @include tablet-landscape {
+    background-position: top right; //!
+    background-size: auto;
+  }
 }
