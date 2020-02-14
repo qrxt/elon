@@ -6,8 +6,11 @@
     background-position: top center;
   }
 
-  @include tablet-landscape {
-    background-position: top right; //!
-    background-size: auto;
+  @media (max-width: 1179px) {
+    background-position: top left;
+  }
+
+  @include tablet {
+    background-position: top right;
   }
 }

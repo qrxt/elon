@@ -2,11 +2,30 @@
   display: flex;
   justify-content: space-between;
 
-  // @include tablet-landscape {
-  //   justify-content: flex-start;
-  // }
+  @media (max-width: 1179px) {
+    justify-content: flex-start;
+  }
+
+  @include tablet {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
 .promo__adventure {
   padding-top: 50px;
+
+  @media (max-width: 1179px) {
+    padding-top: 0;
+  }
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.promo__features {
+  @include tablet {
+    margin-bottom: 30px;
+  }
 }

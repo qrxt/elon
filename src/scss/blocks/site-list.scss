@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
   margin-right: 12px;
+
+  @media (max-width: 1179px) {
+    margin: 0;
+  }
 }
 
 .site-list__item {
@@ -12,6 +16,10 @@
 
 .site-list__item:not(:last-child) {
   margin-right: 38px;
+
+  @media (max-width: 1179px) {
+    margin-right: 25px;
+  }
 }
 
 .site-list__link {
@@ -46,8 +54,13 @@
   &:hover,
   &:focus {
     @include transition(color);
+
     color: rgba($color: $white, $alpha: 0.6);
     outline: none;
+  }
+
+  @include tablet {
+    font-size: 13px;
   }
 }
 

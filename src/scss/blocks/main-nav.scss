@@ -15,6 +15,13 @@
   border-left: 1px solid $transparent-white;
   border-right: 1px solid $transparent-white;
 
+  @include tablet-landscape {
+    width: 25%;
+  }
+
+  @include tablet {
+    width: 24%;
+  }
 }
 
 .main-nav__logo-content {
@@ -51,6 +58,10 @@
 
     border-top: 3px solid rgba($color: $black, $alpha: 0.75);
     border-bottom: 3px solid rgba($color: $black, $alpha: 0.75);
+  }
+
+  @include tablet {
+    padding: 20px 10px 20px 15px;
   }
 }
 
