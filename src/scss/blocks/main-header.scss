@@ -13,4 +13,8 @@
   @include tablet {
     background-position: top right;
   }
+
+  @include mobile {
+    background-position: top center;
+  }
 }

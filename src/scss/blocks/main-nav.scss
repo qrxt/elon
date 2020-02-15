@@ -7,6 +7,10 @@
 .main-nav__inner {
   display: flex;
   justify-content: space-between;
+
+  @include mobile {
+    align-items: center;
+  }
 }
 
 .main-nav__logo {
@@ -21,6 +25,14 @@
 
   @include tablet {
     width: 24%;
+  }
+
+  @include mobile {
+    width: 40%;
+  }
+
+  @media (max-width: 460px) {
+    width: 60%;
   }
 }
 
@@ -63,6 +75,10 @@
   @include tablet {
     padding: 20px 10px 20px 15px;
   }
+
+  @include mobile {
+    padding: 20px auto;
+  }
 }
 
 .main-nav__logo img {
@@ -74,4 +90,15 @@
   @include transition(opacity);
 
   opacity: 0.6;
+}
+
+.main-nav__menu-btn {
+  position: relative;
+  display: none;
+  width: 32px;
+  height: 32px;
+
+  @include mobile {
+    display: block;
+  }
 }

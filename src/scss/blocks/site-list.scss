@@ -8,6 +8,11 @@
   @media (max-width: 1179px) {
     margin: 0;
   }
+
+  @include mobile {
+    display: none;
+    flex-direction: column;
+  }
 }
 
 .site-list__item {

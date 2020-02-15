@@ -1,0 +1,36 @@
+.burger-menu {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  &::before,
+  &::after {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    position: absolute;
+    left: 0;
+
+    background-color: $white;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+
+.burger-menu__middle {
+  display: block;
+  width: 100%;
+  height: 2px;
+
+  background-color: $white;
+}
