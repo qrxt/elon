@@ -99,8 +99,9 @@
 .main-nav__menu-btn {
   position: relative;
   display: none;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 
   @include mobile {
     display: block;
