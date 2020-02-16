@@ -2,6 +2,10 @@
   background-color: $transparent-black;
   border: 1px solid $transparent-white;
   margin-bottom: 58px;
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
 }
 
 .main-nav__inner {

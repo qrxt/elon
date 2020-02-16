@@ -3,9 +3,13 @@
   border: none;
   padding: 0;
 
+  -webkit-tap-highlight-color: transparent;
+
   &::before,
   &::after {
     content: "";
+
+    @include transition(transform);
 
     display: block;
     width: 100%;
@@ -15,6 +19,8 @@
     left: 0;
 
     background-color: $white;
+
+    transform: rotate(0deg);
   }
 
   &::before {
@@ -24,8 +30,12 @@
   &::after {
     bottom: 0;
   }
-}
 
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
 
 .burger-menu__middle {
   display: block;
@@ -33,4 +43,27 @@
   height: 2px;
 
   background-color: $white;
+}
+
+.burger-menu--opened {
+  &::before {
+    @include transition(transform);
+
+    top: calc(50% - 1px);
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    @include transition(transform);
+
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg);
+  }
+}
+
+.burger-menu--opened .burger-menu__middle {
+  @include transition(transform);
+
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
 }

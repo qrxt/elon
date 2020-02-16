@@ -31,6 +31,10 @@
     flex-direction: row;
     justify-content: flex-end;
   }
+
+  @include mobile {
+    justify-content: space-between;
+  }
 }
 
 .promo-features__item {
@@ -45,6 +49,11 @@
 
     margin-right: 10px;
   }
+
+  @include mobile {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 .promo-features__item:nth-child(2n+1) {
@@ -53,5 +62,10 @@
 
   @include tablet {
     margin-right: 10px;
+  }
+
+  @include mobile {
+    width: 140px;
+    height: 140px;
   }
 }
