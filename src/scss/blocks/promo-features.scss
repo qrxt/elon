@@ -8,6 +8,11 @@
   @include tablet {
     width: 100%;
   }
+
+  @media (max-width: 619px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .promo-features__list {
@@ -34,6 +39,19 @@
 
   @include mobile {
     justify-content: space-between;
+  }
+
+  @media (max-width: 619px) {
+    width: 60%;
+    justify-content: center;
+  }
+
+  @media (max-width: 520px) {
+    width: 80%;
+  }
+
+  @media (max-width: 468px) {
+    width: 100%;
   }
 }
 

@@ -30,11 +30,6 @@
     padding-left: 28px;
   }
 
-  &--bottom-left,
-  &--bottom-right {
-    padding-top: 30px;
-  }
-
   &--bottom-right {
     padding-left: 30px;
   }
@@ -218,6 +213,15 @@
     @include transition(opacity);
 
     opacity: 1;
+  }
+}
+
+.feature--bottom-left,
+.feature--bottom-right {
+  padding-top: 30px;
+
+  @include tablet {
+    padding-top: 15px;
   }
 }
 
